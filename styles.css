@@ -1,14 +1,52 @@
 /* External CSS */
 
+/* Gobal CSS Variables */
+:root {
+  /* --colorRed: red; */
+  --primaryColor: #698996;
+  --secondaryColor: #97B1A6;
+  --accentColor: #C9C5BA;
+  --colorWhite: #fff;
+  --colorBlack: #000;
+
+  --cardWidth: 300px;
+  --halfAndHalf: 50%;
+  --spaceSmall: 10px;
+  --spaceMedium: 20px;
+  --spaceLarge: 30px;
+}
+
+/* Global CSS */
+.spaceAround {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spaceEvenly {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
 /* body is a CSS Selector */
 /* {} idicates a CSS Declaration */
 body {
   /* property:value; is a CSS Rule */
   margin: 0;
+  /* background-color: var(--colorRed); */
 }
 
 header {
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid var(--primaryColor);
 }
 
 ul {
@@ -22,10 +60,37 @@ ul {
 }
 
 main {
+  /* Local CSS Variable */
+  --mainColor: orange;
+
   height: 100vh;
+  border: 2px dotted var(--mainColor);
+}
+
+.joinUsCard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.joinUsCard > button {
+  background-color: var(--primaryColor);
+  color: var(--colorWhite);
+}
+
+.joinUsCard > button:hover {
+  background-color: var(--secondaryColor);
+}
+
+.section {
+  height: 100vh;
+  display: flex;
 }
 
 footer {
   display: flex;
   justify-content: center;
+  border-top: 5px solid var(--primaryColor);
 }
